@@ -11,11 +11,11 @@ def Get_arg():
 
     parent_group.add_argument('-n','--Network', action='store_true', help="Start Network Module")
     network_parse = parent_group.add_argument_group(title='Network options')
-    network_parse.add_argument('-s', '--SSH', type=str, help="test ssh by input ip")
-    network_parse.add_argument('-e','--Telnet',type=str, help="test telnet by input ip")
+    network_parse.add_argument('-s', '--SSH', type=str, metavar="IP",help="test ssh by input ip")
+    network_parse.add_argument('-e','--Telnet',type=str, metavar="IP",help="test telnet by input ip")
     #network_parse.add_argument('-t', '--HTTP', type=str, help="test http by input ip")
-    network_parse.add_argument('-t','--FTP',type=str, help="test ftp by input ip")
-    network_parse.add_argument('-p','--Packet',type=int, help="Sniff Packet of input network interface")
+    network_parse.add_argument('-t','--FTP',type=str, metavar="IP",help="test ftp by input ip")
+    network_parse.add_argument('-p','--Packet',type=int, metavar="sniffing_time",help="Sniff Packet of input network interface")
     
     parent_group.add_argument('-f','--Firmware', type=str,metavar="rootfs_PATH" , help="Start Firmware Module")
     parent_group.add_argument('-af','--Analysis_Firmware','-fa', action='store_true',help="Start Firmware_Analysis Module")

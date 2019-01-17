@@ -10,5 +10,5 @@ def packet_sniff(time):
     analytical_resource = numpy.transpose(pkts)
     victim_entropy = entropy.calculate_entropy(analytical_resource[0])
     attack_entropy = entropy.calculate_entropy(analytical_resource[1])
-
+    
     print("victim_rate = {0}, attack_rate = {1}".format(victim_entropy,attack_entropy))
