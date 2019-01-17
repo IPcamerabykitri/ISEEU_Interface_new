@@ -6,12 +6,13 @@ passwd
 pwd
 dropbear
 ssl
-private key
+private
 telnet
 secret
 pgp
 gpg
 token
-api key
+api
 oauth
 sdcard
+key
