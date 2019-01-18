@@ -4,8 +4,8 @@ from . import entropy
 
 def packet_sniff(time):
 
-    max_ent_rate : 5
-    min_ent_rate : 1
+    max_ent_rate = 5
+    min_ent_rate = 1
 
     cap=pyshark.LiveCapture(interface='eth0',only_summaries="IP" "protocol")
     cap.sniff(timeout=time)
