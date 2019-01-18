@@ -27,7 +27,7 @@ def packet_sniff(time):
         IP_count = symbol[max_symbol],
         ent = ent))
 
-    if ent <= 1 or ent >= 5:
+    if ent <= min_ent_rate or ent >= max_ent_rate:
         print("You are Victim!")
     else :
         print("You are not Victim")
@@ -44,7 +44,7 @@ def packet_sniff(time):
         IP_count = symbol[max_symbol],
         ent = ent))
 
-    if ent <= 1 or ent >= 5:
+    if ent <= min_ent_rate or ent >= max_ent_rate:
         print("You are Attacker!")
     else :
         print("You are not Attacker")
