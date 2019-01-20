@@ -1,9 +1,8 @@
 # Scanning Module
 import os
 import sys
-from Hardware_Scan_Module import firmware_check
+from Hardware_Scan_Module import firmware_check,hash_create
 from Network_Scan_Module import packet_sniff, port_check,ftp_check,ssh_check,telnet_check
-
 
 def Port_Scan(ip):
     # print(port_check.nmap(ip))
@@ -59,7 +58,13 @@ def Telnet_Scan(ip):
     # return telnet_check.connect(ip, port)   #1 - open, 0 - closed
 
 def Packet_Scan(scan_time):
+    print("######################Packet_Scan!#####################")
     packet_sniff.packet_sniff(scan_time)
 
-def Firmware_Scan(Path):
-    firmware_check.Check_boot_sequence(Path)
+def Firmware_Scan(path):
+    print("######################Firmware_Scan!#####################")
+    firmware_check.firmwalker_mod(path)
+
+def Hash_Create(path):
+    print("######################Hash_Create!#####################")
+    hash_create.save_hash_dir(path,0)

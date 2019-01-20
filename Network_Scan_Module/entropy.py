@@ -11,4 +11,5 @@ def calculate_entropy(symbol_list):
         reverse_percentage = total_symbol_count/symbol_count
         entropy += percentage * math.log(reverse_percentage,2)
 
+    #return value by Dictionary
     return {"total_symbol_count":total_symbol_count,"values_symbol":values_symbol,"entropy":entropy}
