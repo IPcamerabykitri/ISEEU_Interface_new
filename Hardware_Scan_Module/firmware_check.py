@@ -2,13 +2,13 @@ import subprocess
 import datetime
 import os
 import sys
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+#sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 from ISEEU_Utility import file_control,subprocess_control
 
-def get_data_file_list(data_file_name):
+'''def get_data_file_list(data_file_name):
     data_path = os.path.dirname(os.path.abspath(__file__)) + "/data/"
     data = open(data_path + data_file_name, 'r')
-    return [line for line in data.read().split("\n") if line.strip() != '']
+    return [line for line in data.read().split("\n") if line.strip() != '']'''
 
 # Check the boot process on the root file system. if success, it returns 0
 def Check_boot_sequence(rootfs_path):
@@ -18,13 +18,13 @@ def Check_boot_sequence(rootfs_path):
     command = os.path.dirname(__file__)+"/firmwalker_mod.sh " + rootfs_path
     return subprocess.check_call(command, shell=True)
 
-def Execute(command, save_folder, save_file):
+'''def Execute(command, save_folder, save_file):
     with file_control.file_open(save_folder, save_file, 'a') as save_file:
         for result in subprocess_control.get_subprocess_result(command):
             if result is not '':
-                save_file.write(result+"\n")
+                save_file.write(result+"\n")'''
 
-def firmwalker_mod(path):
+'''def firmwalker_mod(path):
     dt = datetime.datetime.now()
     file_date = dt.strftime("%Y%m%d%H%M")
     save_path = "{}/result/firm_check/{}".format(os.path.dirname(os.path.abspath(os.path.dirname(__file__))),file_date)
@@ -80,4 +80,4 @@ def firmwalker_mod(path):
     print("check_finished")
 # stand-alone execution code
 if __name__ == "__main__" :
-    firmwalker_mod("/root/Desktop/qemu_mips/rootfs_int")
+    firmwalker_mod("/root/Desktop/qemu_mips/rootfs_int")'''

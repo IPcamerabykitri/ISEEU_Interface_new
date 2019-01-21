@@ -63,7 +63,7 @@ def Packet_Scan(scan_time):
 
 def Firmware_Scan(path):
     print("######################Firmware_Scan!#####################")
-    firmware_check.firmwalker_mod(path)
+    firmware_check.Check_boot_sequence(path)
 
 def Hash_Create(path):
     print("######################Hash_Create!#####################")
