@@ -67,4 +67,4 @@ def Firmware_Scan(path):
 
 def Hash_Create(path):
     print("######################Hash_Create!#####################")
-    hash_create.save_hash_dir(path,0)
+    hash_create.save_hash_dir(path,1)
