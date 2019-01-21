@@ -47,7 +47,8 @@ def save_hash_dir(directory, verbose=0):
   dt = datetime.datetime.now()
   file_date = dt.strftime("%Y%m%d%H%M")
   file_name = "MD5_{file_date}".format(file_date=file_date)
-  file = file_control.file_open("{}/result/hash_result".format(os.path.dirname(os.path.abspath(os.path.dirname(__file__)))), file_name, 'w')
+  file = file_control.file_open("{}/result/hash_result"
+                                .format(os.path.dirname(os.path.abspath(os.path.dirname(__file__)))), file_name, 'w')
   file.write("{target}\t{result}".format(target = directory, result=GetHashofDirs(directory,verbose)))
   file.close()
 
