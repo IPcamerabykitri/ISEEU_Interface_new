@@ -65,7 +65,8 @@ def packet_sniff(time):
         print("You are not Attacker")
 
     print("\nPacket Test ends....")
-
+    
+    #Data Save
     dt = datetime.datetime.now()
     file_date = dt.strftime("%Y%m%d%H%M")
     save_path = "{}/result/Packet".format(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
